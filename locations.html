@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windsor Routes | The Daily Wag Windsor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .route-card img {
+            transition: transform 0.4s ease;
+        }
+        .route-card:hover img {
+            transform: scale(1.04);
+        }
+        .difficulty-easy   { background-color: #d1fae5; color: #065f46; }
+        .difficulty-medium { background-color: #fef9c3; color: #854d0e; }
+        .difficulty-hard   { background-color: #fee2e2; color: #991b1b; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="text-2xl font-bold text-[#4f772d] tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="about.html" data-page="about.html" class="hover:text-[#4f772d] font-medium">About</a>
+                    <a href="services.html" data-page="services.html" class="hover:text-[#4f772d] font-medium">Services</a>
+                    <a href="locations.html" data-page="locations.html" class="hover:text-[#4f772d] font-medium">Windsor Routes</a>
+                    <a href="contact.html" data-page="contact.html" class="bg-[#4f772d] text-white px-6 py-2 rounded-full hover:bg-[#31511e] transition">Book a Walk</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Menu -->
+    <div id="side-menu" class="fixed inset-0 z-[60] bg-white hidden-menu mobile-menu md:hidden p-8 flex flex-col space-y-6 text-xl font-semibold">
+        <button id="close-btn" class="self-end text-3xl">&times;</button>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="locations.html" class="mobile-link">Windsor Routes</a>
+        <a href="contact.html" class="mobile-link text-[#4f772d]">Book a Walk</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="h-72 flex items-center justify-center text-center text-white px-4 pt-20"
+             style="background: linear-gradient(rgba(19,42,19,0.65), rgba(19,42,19,0.65)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;">
+        <div>
+            <p class="text-[#ecf39e] font-semibold uppercase tracking-widest mb-2">Where We Walk</p>
+            <h1 class="text-5xl md:text-6xl font-bold">Windsor Routes</h1>
+            <p class="mt-4 text-gray-200 text-lg max-w-xl mx-auto">Six stunning routes across Windsor &amp; Eton — chosen for every dog's pace, energy, and personality.</p>
+        </div>
+    </section>
+
+    <!-- Route Key -->
+    <section class="py-10 bg-white border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-center gap-6 text-sm font-medium">
+            <div class="flex items-center gap-2"><span class="w-4 h-4 rounded-full difficulty-easy inline-block"></span> Easy — flat, paved, relaxed pace</div>
+            <div class="flex items-center gap-2"><span class="w-4 h-4 rounded-full difficulty-medium inline-block"></span> Moderate — some terrain, mixed surfaces</div>
+            <div class="flex items-center gap-2"><span class="w-4 h-4 rounded-full difficulty-hard inline-block"></span> Energetic — longer distances, varied trails</div>
+        </div>
+    </section>
+
+    <!-- Routes -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+            <!-- Route 1: Windsor Great Park -->
+            <div id="great-park" class="route-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
+                <div class="overflow-hidden h-72 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="Windsor Great Park" class="w-full h-full object-cover">
+                </div>
+                <div class="p-10 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-sm font-semibold px-3 py-1 rounded-full difficulty-hard">Energetic</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-route mr-1"></i>Up to 5 km</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-clock mr-1"></i>60–90 min</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#132a13] mb-3">Windsor Great Park</h2>
+                    <p class="text-gray-600 mb-5 leading-relaxed">
+                        The crown jewel of Windsor dog walking. Spanning over 4,800 acres, this royal park offers woodland trails, open meadows, and the iconic Savill Garden perimeter. Dogs can roam vast grassy stretches and explore ancient woodland paths all year round.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our routes wind through the deer park (dogs kept on leads in deer areas), past Virginia Water lake, and into the quieter forest trails that most visitors never find. Perfect for high-energy dogs who need space to stretch their legs.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Off-lead areas</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Woodland trails</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Open meadows</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Best for high-energy breeds</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Route 2: The Long Walk -->
+            <div id="long-walk" class="route-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
+                <div class="p-10 flex flex-col justify-center md:order-1 order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-sm font-semibold px-3 py-1 rounded-full difficulty-medium">Moderate</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-route mr-1"></i>4.8 km one way</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-clock mr-1"></i>60 min</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#132a13] mb-3">The Long Walk</h2>
+                    <p class="text-gray-600 mb-5 leading-relaxed">
+                        One of Britain's most famous tree-lined avenues, stretching 4.8 km straight from Windsor Castle to the Copper Horse statue atop Snow Hill. The wide, flat gravel path offers stunning views of the castle and an almost magical sense of grandeur.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        We typically walk the first half and loop back through the adjacent parkland, giving dogs a mix of open avenue and softer grass underfoot. Quiet enough in the early mornings to let calmer dogs walk at their own pace.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Flat terrain</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Iconic views</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">All-weather path</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Great for all breeds</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden h-72 md:h-auto md:order-2 order-1">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="The Long Walk" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Route 3: Eton & River Thames -->
+            <div id="eton" class="route-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
+                <div class="overflow-hidden h-72 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1563461661026-49631dd5d68e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="Eton and River Thames" class="w-full h-full object-cover">
+                </div>
+                <div class="p-10 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-sm font-semibold px-3 py-1 rounded-full difficulty-easy">Easy</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-route mr-1"></i>2–3 km</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-clock mr-1"></i>45–60 min</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#132a13] mb-3">Eton &amp; River Thames</h2>
+                    <p class="text-gray-600 mb-5 leading-relaxed">
+                        Cross Windsor Bridge into the charming town of Eton and follow the Thames towpath for a serene riverside stroll. The flat, well-maintained path runs alongside the river, offering peaceful views of rowing crews, swans, and weeping willows.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        This route is particularly popular for older dogs and puppies on their first walks — gentle underfoot, minimal traffic, and plenty of interesting smells along the riverbank. We often stop at the small riverside green for a rest.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Riverside path</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Gentle terrain</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Scenic towpath</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Ideal for seniors &amp; puppies</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Route 4: Old Windsor -->
+            <div id="old-windsor" class="route-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
+                <div class="p-10 flex flex-col justify-center md:order-1 order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-sm font-semibold px-3 py-1 rounded-full difficulty-medium">Moderate</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-route mr-1"></i>3–4 km</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-clock mr-1"></i>60 min</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#132a13] mb-3">Old Windsor Meadows</h2>
+                    <p class="text-gray-600 mb-5 leading-relaxed">
+                        A hidden gem tucked south of Windsor. Old Windsor's riverside meadows and Ham Island offer a completely different feel from the busier town routes — quieter, wilder, and wonderfully unspoilt. The meadows flood in winter, creating a rich habitat full of interesting scents for dogs.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Our circular route takes in the meadow footpaths, the Thames bank near Magna Carta Island, and the quieter lanes through the village. A brilliant choice for dogs who love sniffing through long grass and exploring off the beaten track.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Meadow footpaths</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Low foot traffic</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Riverside sections</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Great for sniffy dogs</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden h-72 md:h-auto md:order-2 order-1">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="Old Windsor Meadows" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Route 5: Dedworth -->
+            <div id="dedworth" class="route-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
+                <div class="overflow-hidden h-72 md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="Dedworth Green" class="w-full h-full object-cover">
+                </div>
+                <div class="p-10 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-sm font-semibold px-3 py-1 rounded-full difficulty-easy">Easy</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-route mr-1"></i>1.5–2.5 km</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-clock mr-1"></i>30–45 min</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#132a13] mb-3">Dedworth Green &amp; Broom Farm</h2>
+                    <p class="text-gray-600 mb-5 leading-relaxed">
+                        Our local neighbourhood route for dogs who live in or around Dedworth. Dedworth Green and the surrounding Broom Farm estate have well-kept parks, green corridors, and quiet residential paths that are perfect for shorter, lower-intensity walks.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        This is the go-to route for puppy visits and mid-day toilet walks. Familiar and consistent — great for dogs who find new environments stressful, or those being eased back into exercise after illness or injury.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Quiet streets</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Local parks</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Short walk option</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Ideal for anxious dogs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Route 6: Clewer Village -->
+            <div id="clewer" class="route-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden grid md:grid-cols-2">
+                <div class="p-10 flex flex-col justify-center md:order-1 order-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-sm font-semibold px-3 py-1 rounded-full difficulty-medium">Moderate</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-route mr-1"></i>2.5–3.5 km</span>
+                        <span class="text-sm text-gray-400"><i class="fa-solid fa-clock mr-1"></i>45–60 min</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-[#132a13] mb-3">Clewer Village &amp; Nature Reserve</h2>
+                    <p class="text-gray-600 mb-5 leading-relaxed">
+                        One of Windsor's best-kept secrets. Clewer Village retains a genuine rural character despite being minutes from the town centre. Our route passes through the historic churchyard, along the mill stream, and into Clewer Nature Reserve — a wetland haven for wildlife.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The nature reserve is an SSSI (Site of Special Scientific Interest) with boardwalk paths over the wetland, reed beds, and open water. Dogs must be kept on leads here, but the rich smells and sounds keep even the most easily bored dogs fully engaged.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Nature reserve</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Wetland boardwalks</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Historic village lanes</span>
+                        <span class="px-3 py-1 bg-[#f8faf7] border border-gray-200 rounded-full text-sm">Rich wildlife scents</span>
+                    </div>
+                </div>
+                <div class="overflow-hidden h-72 md:h-auto md:order-2 order-1">
+                    <img src="https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                         alt="Clewer Nature Reserve" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Route Finder CTA -->
+    <section class="py-20 bg-[#132a13] text-white text-center px-4">
+        <h2 class="text-4xl font-bold mb-4">Not Sure Which Route Suits Your Dog?</h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-xl mx-auto">Tell us about your pup and we'll pick the perfect route — and the perfect walker — for them.</p>
+        <a href="contact.html" class="inline-block bg-[#90a955] text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-[#4f772d] transition">Book a Free Meet &amp; Greet</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <span class="text-2xl font-bold text-white tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></span>
+                <p class="mt-2 text-sm">© 2024 The Daily Wag Windsor. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-xl">
+                <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
