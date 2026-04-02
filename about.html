@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | The Daily Wag Windsor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="text-2xl font-bold text-[#4f772d] tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="about.html" data-page="about.html" class="hover:text-[#4f772d] font-medium">About</a>
+                    <a href="services.html" data-page="services.html" class="hover:text-[#4f772d] font-medium">Services</a>
+                    <a href="index.html#locations" class="hover:text-[#4f772d] font-medium">Windsor Routes</a>
+                    <a href="contact.html" data-page="contact.html" class="bg-[#4f772d] text-white px-6 py-2 rounded-full hover:bg-[#31511e] transition">Book a Walk</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Side Menu -->
+    <div id="side-menu" class="fixed inset-0 z-[60] bg-white hidden-menu mobile-menu md:hidden p-8 flex flex-col space-y-6 text-xl font-semibold">
+        <button id="close-btn" class="self-end text-3xl">&times;</button>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="index.html#locations" class="mobile-link">Windsor Routes</a>
+        <a href="contact.html" class="mobile-link text-[#4f772d]">Book a Walk</a>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero h-72 flex items-center justify-center text-center text-white px-4 pt-20">
+        <div>
+            <p class="text-[#ecf39e] font-semibold uppercase tracking-widest mb-2">Who We Are</p>
+            <h1 class="text-5xl md:text-6xl font-bold">About Us</h1>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 text-[#132a13]">Born from a Love of Dogs &amp; Windsor</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        The Daily Wag started in 2019 when our founder, Jamie, noticed a gap in truly personalised, trustworthy dog walking in Windsor. Having grown up with dogs and spending years volunteering at local shelters, Jamie set out to build a service where every dog is treated like family.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        We're not a faceless agency — we're a small, dedicated team of dog lovers who live and walk the same streets and parks as you. Every walker goes through rigorous training, background checks, and a supervised trial period before walking independently.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Whether your dog needs a vigorous run through Windsor Great Park or a gentle amble along the Thames, we match them with the right walker and the right route every single time.
+                    </p>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Walker with dogs" class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-[#4f772d] text-white p-6 rounded-2xl shadow-lg hidden lg:block">
+                        <p class="font-bold text-lg">5+ Years of Happy Wags</p>
+                        <p class="text-green-200 text-sm">Serving Windsor since 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="py-20 bg-[#f8faf7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
+            <h2 class="text-4xl font-bold text-[#132a13] mb-4">Why Trust Us With Your Pup?</h2>
+            <p class="text-xl text-gray-500">Every step we take is backed by training, care, and accountability.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-3xl text-center shadow-sm border border-gray-100 card-hover">
+                <div class="w-16 h-16 bg-[#ecf39e] rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fa-solid fa-shield-halved text-2xl text-[#4f772d]"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Fully Insured</h3>
+                <p class="text-gray-500 text-sm">Public liability insurance up to £1 million for complete peace of mind.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl text-center shadow-sm border border-gray-100 card-hover">
+                <div class="w-16 h-16 bg-[#ecf39e] rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fa-solid fa-id-card text-2xl text-[#4f772d]"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">DBS Checked</h3>
+                <p class="text-gray-500 text-sm">All walkers are DBS (Disclosure &amp; Barring Service) checked and verified.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl text-center shadow-sm border border-gray-100 card-hover">
+                <div class="w-16 h-16 bg-[#ecf39e] rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fa-solid fa-kit-medical text-2xl text-[#4f772d]"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Pet First Aid</h3>
+                <p class="text-gray-500 text-sm">Certified in canine first aid — prepared for any situation on the walk.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl text-center shadow-sm border border-gray-100 card-hover">
+                <div class="w-16 h-16 bg-[#ecf39e] rounded-full flex items-center justify-center mx-auto mb-5">
+                    <i class="fa-solid fa-location-dot text-2xl text-[#4f772d]"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">GPS Tracked</h3>
+                <p class="text-gray-500 text-sm">Real-time GPS tracking with post-walk reports and photos sent to you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
+            <h2 class="text-4xl font-bold text-[#132a13] mb-4">Meet the Walkers</h2>
+            <p class="text-xl text-gray-500">The passionate people behind every wag.</p>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10">
+            <div class="text-center">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Jamie" class="w-36 h-36 rounded-full object-cover mx-auto mb-4 shadow-lg">
+                <h3 class="text-xl font-bold text-[#132a13]">Jamie Collins</h3>
+                <p class="text-[#4f772d] font-medium text-sm mb-2">Founder &amp; Head Walker</p>
+                <p class="text-gray-500 text-sm">Dog lover since birth, Windsor local for life. Jamie personally meets every new dog before their first walk.</p>
+            </div>
+            <div class="text-center">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Sam" class="w-36 h-36 rounded-full object-cover mx-auto mb-4 shadow-lg">
+                <h3 class="text-xl font-bold text-[#132a13]">Sam Okafor</h3>
+                <p class="text-[#4f772d] font-medium text-sm mb-2">Senior Dog Walker</p>
+                <p class="text-gray-500 text-sm">Former vet nurse with a special talent for nervous and reactive dogs. Gentle, patient, and endlessly kind.</p>
+            </div>
+            <div class="text-center">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Priya" class="w-36 h-36 rounded-full object-cover mx-auto mb-4 shadow-lg">
+                <h3 class="text-xl font-bold text-[#132a13]">Priya Sharma</h3>
+                <p class="text-[#4f772d] font-medium text-sm mb-2">Dog Walker &amp; Puppy Specialist</p>
+                <p class="text-gray-500 text-sm">Priya has a gift for socialising puppies and making every dog feel safe and confident on their adventures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="py-20 bg-[#132a13] text-white text-center px-4">
+        <h2 class="text-4xl font-bold mb-4">Ready to Meet the Team?</h2>
+        <p class="text-xl text-gray-300 mb-8">Book a free, no-obligation meet &amp; greet at your home.</p>
+        <a href="contact.html" class="inline-block bg-[#90a955] text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-[#4f772d] transition">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <span class="text-2xl font-bold text-white tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></span>
+                <p class="mt-2 text-sm">© 2024 The Daily Wag Windsor. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-xl">
+                <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

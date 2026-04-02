@@ -4,53 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Daily Wag | Professional Dog Walking in Windsor</title>
-    <!-- Tailwind CSS for rapid, modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap');
-
-        :root {
-            --primary: #4f772d;
-            --secondary: #90a955;
-            --accent: #ecf39e;
-            --dark: #132a13;
-        }
-
-        body {
-            font-family: 'Lexend', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Fraunces', serif;
-        }
-
-        .hero-gradient {
-            background: linear-gradient(rgba(19, 42, 19, 0.6), rgba(19, 42, 19, 0.6)),
-                        url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .hidden-menu {
-            transform: translateX(100%);
-        }
-
-        /* Success Message Styling */
-        #form-message {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -58,19 +14,13 @@
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center space-x-2">
-                    <span class="text-2xl font-bold text-[#4f772d] tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></span>
-                </div>
-
-                <!-- Desktop Links -->
+                <a href="index.html" class="text-2xl font-bold text-[#4f772d] tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></a>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="hover:text-[#4f772d] font-medium">About</a>
-                    <a href="#services" class="hover:text-[#4f772d] font-medium">Services</a>
-                    <a href="#locations" class="hover:text-[#4f772d] font-medium">Windsor Routes</a>
-                    <a href="#contact" class="bg-[#4f772d] text-white px-6 py-2 rounded-full hover:bg-[#31511e] transition">Book a Walk</a>
+                    <a href="about.html" data-page="about.html" class="hover:text-[#4f772d] font-medium">About</a>
+                    <a href="services.html" data-page="services.html" class="hover:text-[#4f772d] font-medium">Services</a>
+                    <a href="index.html#locations" class="hover:text-[#4f772d] font-medium">Windsor Routes</a>
+                    <a href="contact.html" data-page="contact.html" class="bg-[#4f772d] text-white px-6 py-2 rounded-full hover:bg-[#31511e] transition">Book a Walk</a>
                 </div>
-
-                <!-- Mobile Toggle -->
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-gray-600 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -83,10 +33,10 @@
     <!-- Mobile Side Menu -->
     <div id="side-menu" class="fixed inset-0 z-[60] bg-white hidden-menu mobile-menu md:hidden p-8 flex flex-col space-y-6 text-xl font-semibold">
         <button id="close-btn" class="self-end text-3xl">&times;</button>
-        <a href="#about" class="mobile-link">About</a>
-        <a href="#services" class="mobile-link">Services</a>
-        <a href="#locations" class="mobile-link">Windsor Routes</a>
-        <a href="#contact" class="mobile-link text-[#4f772d]">Book a Walk</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="index.html#locations" class="mobile-link">Windsor Routes</a>
+        <a href="contact.html" class="mobile-link text-[#4f772d]">Book a Walk</a>
     </div>
 
     <!-- Hero Section -->
@@ -95,20 +45,20 @@
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Happy Paws in the Heart of Windsor</h1>
             <p class="text-xl md:text-2xl mb-10 text-gray-100">Professional, reliable, and loving dog walking services across Windsor and Eton.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-[#90a955] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#4f772d] transition">Schedule a Meet & Greet</a>
-                <a href="#services" class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white/40 transition">View Services</a>
+                <a href="contact.html" class="bg-[#90a955] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-[#4f772d] transition">Schedule a Meet &amp; Greet</a>
+                <a href="services.html" class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white/40 transition">View Services</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-white">
+    <!-- About Preview -->
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Dog in park" class="rounded-3xl shadow-2xl">
                     <div class="absolute -bottom-6 -right-6 bg-[#ecf39e] p-6 rounded-2xl shadow-lg hidden lg:block">
-                        <p class="font-bold text-[#132a13] text-lg">Fully Insured & DBS Checked</p>
+                        <p class="font-bold text-[#132a13] text-lg">Fully Insured &amp; DBS Checked</p>
                     </div>
                 </div>
                 <div>
@@ -116,10 +66,7 @@
                     <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                         At The Daily Wag, we believe that a tired dog is a happy dog. Based in beautiful Windsor, we provide more than just a toilet break—we provide socialisation, exercise, and mental stimulation.
                     </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Whether your pup loves a group scurry through Windsor Great Park or prefers a quiet solo stroll near the River Thames, we tailor every walk to their personality.
-                    </p>
-                    <ul class="space-y-4">
+                    <ul class="space-y-4 mb-8">
                         <li class="flex items-center space-x-3 text-gray-700">
                             <i class="fa-solid fa-circle-check text-[#4f772d]"></i>
                             <span>GPS Tracked Walks (Updates sent to your phone)</span>
@@ -133,20 +80,19 @@
                             <span>Small Groups (Max 4 dogs)</span>
                         </li>
                     </ul>
+                    <a href="about.html" class="inline-block bg-[#4f772d] text-white px-8 py-3 rounded-full font-bold hover:bg-[#31511e] transition">Meet the Team</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-[#f8faf7]">
+    <!-- Services Preview -->
+    <section class="py-24 bg-[#f8faf7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
             <h2 class="text-4xl font-bold text-[#132a13] mb-4">Our Services</h2>
             <p class="text-xl text-gray-600">Flexible options to suit your schedule and your dog's needs.</p>
         </div>
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
-            <!-- Service 1 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 card-hover">
                 <div class="w-16 h-16 bg-[#ecf39e] rounded-2xl flex items-center justify-center mb-6">
                     <i class="fa-solid fa-users text-2xl text-[#4f772d]"></i>
@@ -155,8 +101,6 @@
                 <p class="text-gray-600 mb-6">A 60-minute social adventure for friendly pups. Great for burning energy and making new friends.</p>
                 <p class="text-[#4f772d] font-bold text-xl">From £15.00</p>
             </div>
-
-            <!-- Service 2 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 card-hover">
                 <div class="w-16 h-16 bg-[#ecf39e] rounded-2xl flex items-center justify-center mb-6">
                     <i class="fa-solid fa-shield-dog text-2xl text-[#4f772d]"></i>
@@ -165,8 +109,6 @@
                 <p class="text-gray-600 mb-6">Perfect for nervous dogs, puppies, or seniors who prefer 1-on-1 attention and a gentler pace.</p>
                 <p class="text-[#4f772d] font-bold text-xl">From £22.00</p>
             </div>
-
-            <!-- Service 3 -->
             <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 card-hover">
                 <div class="w-16 h-16 bg-[#ecf39e] rounded-2xl flex items-center justify-center mb-6">
                     <i class="fa-solid fa-house-chimney-window text-2xl text-[#4f772d]"></i>
@@ -176,12 +118,16 @@
                 <p class="text-[#4f772d] font-bold text-xl">From £10.00</p>
             </div>
         </div>
+        <div class="text-center mt-12">
+            <a href="services.html" class="inline-block border-2 border-[#4f772d] text-[#4f772d] px-8 py-3 rounded-full font-bold hover:bg-[#4f772d] hover:text-white transition">See Full Pricing &amp; Details</a>
+        </div>
     </section>
 
-    <!-- Location Tags Section -->
-    <section id="locations" class="py-24 bg-white overflow-hidden">
+    <!-- Locations -->
+    <section id="locations" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-12">Proudly Serving Windsor & Surrounding Areas</h2>
+            <h2 class="text-3xl font-bold mb-4">Proudly Serving Windsor &amp; Surrounding Areas</h2>
+            <p class="text-gray-500 mb-12">We walk the routes your dog loves most.</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <span class="px-6 py-3 bg-gray-100 rounded-full font-medium border border-gray-200">Windsor Great Park</span>
                 <span class="px-6 py-3 bg-gray-100 rounded-full font-medium border border-gray-200">The Long Walk</span>
@@ -193,70 +139,11 @@
         </div>
     </section>
 
-    <!-- Contact/Booking Form -->
-    <section id="contact" class="py-24 bg-[#132a13] text-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">Ready for the First Wag?</h2>
-                    <p class="text-gray-300 mb-10">Fill out our form for a free consultation. We'll come to you to meet your dog and discuss their specific needs.</p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-[#4f772d] rounded-full flex items-center justify-center">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <span>01753 123456</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-[#4f772d] rounded-full flex items-center justify-center">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <span>hello@thedailywag-windsor.co.uk</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-[#4f772d] rounded-full flex items-center justify-center">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <span>Windsor, Berkshire, SL4</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl text-gray-800">
-                    <form id="booking-form" onsubmit="handleFormSubmit(event)">
-                        <div class="grid grid-cols-1 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#4f772d]">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Dog's Name & Breed</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#4f772d]">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Service Required</label>
-                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#4f772d]">
-                                    <option>Group Walking</option>
-                                    <option>Solo Walking</option>
-                                    <option>Puppy Visit</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                                <textarea rows="3" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#4f772d]" placeholder="Tell us about your pup..."></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-[#4f772d] text-white py-4 rounded-xl font-bold hover:bg-[#31511e] transition">Send Inquiry</button>
-                        </div>
-                    </form>
-                    <div id="form-message" class="text-center py-10">
-                        <i class="fa-solid fa-circle-check text-5xl text-[#4f772d] mb-4"></i>
-                        <h3 class="text-2xl font-bold">Barking Awesome!</h3>
-                        <p class="text-gray-600">We've received your message and will be in touch within 24 hours.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- CTA Banner -->
+    <section class="py-20 bg-[#4f772d] text-white text-center px-4">
+        <h2 class="text-4xl font-bold mb-4">Ready to Get Started?</h2>
+        <p class="text-xl text-green-100 mb-8">Book a free meet &amp; greet — no strings attached.</p>
+        <a href="contact.html" class="inline-block bg-white text-[#4f772d] px-10 py-4 rounded-full text-lg font-bold hover:bg-[#ecf39e] transition">Book Now</a>
     </section>
 
     <!-- Footer -->
@@ -264,7 +151,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-8 md:mb-0">
                 <span class="text-2xl font-bold text-white tracking-tight">The Daily <span class="text-[#90a955]">Wag</span></span>
-                <p class="mt-2 text-sm">© 2023 The Daily Wag Windsor. All rights reserved.</p>
+                <p class="mt-2 text-sm">© 2024 The Daily Wag Windsor. All rights reserved.</p>
             </div>
             <div class="flex space-x-6 text-xl">
                 <a href="#" class="hover:text-[#90a955]"><i class="fa-brands fa-instagram"></i></a>
@@ -274,52 +161,6 @@
         </div>
     </footer>
 
-    <script>
-        // UI Interaction Script
-        const menuBtn = document.getElementById('menu-btn');
-        const sideMenu = document.getElementById('side-menu');
-        const closeBtn = document.getElementById('close-btn');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        // Toggle mobile menu
-        menuBtn.addEventListener('click', () => {
-            sideMenu.classList.remove('hidden-menu');
-        });
-
-        closeBtn.addEventListener('click', () => {
-            sideMenu.classList.add('hidden-menu');
-        });
-
-        // Close menu on link click
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                sideMenu.classList.add('hidden-menu');
-            });
-        });
-
-        // Simple Form Submission Handler
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const form = document.getElementById('booking-form');
-            const message = document.getElementById('form-message');
-
-            // Logic for visual feedback
-            form.style.display = 'none';
-            message.style.display = 'block';
-
-            // In a real scenario, you would use fetch() here to send data to a backend
-            console.log("Inquiry sent successfully.");
-        }
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('py-2');
-            } else {
-                nav.classList.remove('py-2');
-            }
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
